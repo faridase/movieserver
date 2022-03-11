@@ -39,6 +39,8 @@ export class MovieService {
     });
     return {
       data: result,
+      page_total: Math.ceil(total / limit),
+      filtered: result.length,
       total: total,
     };
   }
